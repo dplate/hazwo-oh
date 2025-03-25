@@ -9,10 +9,10 @@ export default (level) => {
 
     level.walls.forEach(wall => {
         const line = document.createElementNS(svgNamespace,'line');
-        line.setAttribute('x1', wall.from.x);
-        line.setAttribute('y1', wall.from.y);
-        line.setAttribute('x2', wall.to.x);
-        line.setAttribute('y2', wall.to.y);
+        line.setAttribute('x1', wall.position.x);
+        line.setAttribute('y1', wall.position.y);
+        line.setAttribute('x2', wall.position.x + wall.length.x);
+        line.setAttribute('y2', wall.position.y + wall.length.y);
         line.style.stroke = 'red';
         line.style.lineWidth = '2px';
         debugLayer.appendChild(line);

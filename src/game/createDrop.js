@@ -6,16 +6,24 @@ export default (position) => {
     element.style.top = `${position.y}px`;
     element.style.transform = 'translate(-50%, -50%)';
     element.style.width = '50px';
-    element.style.transition = 'left 1s, top 1s';
+    element.style.transition = 'left 1s linear, top 1s linear';
 
     return {
+        lastPosition: { ...position },
         position,
         nextPosition: { ...position },
-        speed: {
+        force: {
             x: 0,
             y: 0
         },
-        time: performance.now(),
+        speed: {
+            x: 10,
+            y: -5
+        },
+        time: performance.now() / 1000.0,
+        airResistanceFactor: 2.2,
+        coreRadius: 10.0,
+        softRadius: 25.0,
         element
     };
 }
