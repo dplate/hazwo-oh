@@ -20,10 +20,14 @@ export default (position) => {
             x: 10,
             y: -5
         },
+        pressures: [],
+        maxPressure: 0,
         time: performance.now() / 1000.0,
         airResistanceFactor: 2.2,
         coreRadius: 10.0,
         softRadius: 25.0,
+        adhesiveness: 5.0,
+        elasticity: 25.0,
         element
     };
 }

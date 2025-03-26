@@ -6,6 +6,16 @@ export default [
             {
                 position: {
                     x: 200,
+                    y: 200
+                },
+                length: {
+                    x: 400,
+                    y: 100
+                }
+            },
+            {
+                position: {
+                    x: 200,
                     y: 400
                 },
                 length: {
